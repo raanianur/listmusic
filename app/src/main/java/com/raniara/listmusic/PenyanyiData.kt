@@ -1,7 +1,7 @@
 package com.raniara.listmusic
 
 import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
+import kotlinx.android.parcel.Parcelize
 
 
 @Parcelize
@@ -10,3 +10,4 @@ data class PenyanyiData(
     val gambar: Int,
     val daftarLagu: List<LaguData>
 ) : Parcelable
+
