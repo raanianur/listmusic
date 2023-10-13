@@ -9,12 +9,22 @@
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:title="@string/app_name"
+        android:layout_height="?attr/actionBarSize"
         android:elevation="2dp"
-        app:titleTextColor="@color/design_default_color_on_primary"
-        android:background="@color/design_default_color_primary"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:background="@color/red_mu"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="List Music"
+            android:layout_gravity="start"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/design_default_color_on_primary"/>
+    </com.google.android.material.appbar.MaterialToolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewPenyanyi"
