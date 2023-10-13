@@ -1,25 +1,33 @@
 package com.raniara.fraglistmuic
 
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class SingerAdapter(private val listSong: List<Song>) : RecyclerView.Adapter<SongAdapter.SongViewHolder>(){
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SongAdapter.SongViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_song, parent, false)
-        return LaguViewHolder(view)
 
+class SingerAdapter(private val daftarPenyanyi: List<Singer>, private val clickListener: (Singer) -> Unit) : RecyclerView.Adapter<SingerAdapter.SingerViewHolder>(){
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SingerViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_singer, parent, false)
+        return SingerViewHolder(view)
+    }
+    override fun onBindViewHolder(holder: SingerViewHolder, position: Int) {
+        holder.bind(daftarPenyanyi[position], clickListener)
     }
 
-    override fun onBindViewHolder(holder: SongAdapter.SongViewHolder, position: Int) {
-        holder.bind(listSong[position])
-    }
+    override fun getItemCount() = daftarPenyanyi.size
 
-    override fun getItemCount(): Int = listSong.size
+    class SingerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        private val imgPenyanyi: ImageView= view.findViewById(R.id.imgPenyanyi)
+        private val tvNamaPenyanyi: TextView = view.findViewById(R.id.tvNamaPenyanyi)
 
-    class LaguViewHolder(view : View) : RecyclerView.ViewHolder(view){
-        private val tvTitleSong: TextView
+        fun bind(penyanyi: Singer, clickListener: (Singer) -> Unit) {
+            tvNamaPenyanyi.text = penyanyi.name
+            imgPenyanyi.setImageResource(penyanyi.image)
+            itemView.setOnClickListener { clickListener(penyanyi) }
+        }
     }
 }
