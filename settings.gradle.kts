@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "listmusic"
+rootProject.name = "FragListmuic"
 include(":app")
  
