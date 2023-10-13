@@ -170,9 +170,10 @@ class DaftarPenyanyiActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = PenyanyiAdapter(daftarPenyanyi)
 
-//        val btnChangeLayout = findViewById<Button>(R.id.btnChangeLayout)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
+        toolbar.setTitle("")
         setSupportActionBar(toolbar)
+
 
     }
 
