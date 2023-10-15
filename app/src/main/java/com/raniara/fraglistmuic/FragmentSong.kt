@@ -33,11 +33,13 @@ class FragmentSong : Fragment(){
     }
 
     companion object{
-        fun newInstance(penyanyi: Song) = FragmentSong().apply {
-            arguments= Bundle().apply {
-                putParcelable("singer", penyanyi)
-            }
-
+        fun newInstance(penyanyi: Singer): FragmentSong {
+            val fragment = FragmentSong()
+            val bundle = Bundle()
+            bundle.putParcelable("penyanyi", penyanyi)
+            fragment.arguments = bundle
+            return fragment
         }
     }
+
 }

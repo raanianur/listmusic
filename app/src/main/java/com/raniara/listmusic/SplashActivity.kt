@@ -9,12 +9,12 @@ import android.os.Looper
 
 class SplashActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
-
-        Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, DaftarPenyanyiActivity::class.java))
-        }, 2000)
-    }
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_splash)
+//
+//        Handler(Looper.getMainLooper()).postDelayed({
+//            startActivity(Intent(this, DaftarPenyanyiActivity::class.java))
+//        }, 2000)
+//    }
 }

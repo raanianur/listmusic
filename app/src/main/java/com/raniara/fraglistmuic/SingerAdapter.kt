@@ -9,13 +9,19 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class SingerAdapter(private val daftarPenyanyi: List<Singer>, private val clickListener: (Singer) -> Unit) : RecyclerView.Adapter<SingerAdapter.SingerViewHolder>(){
+class SingerAdapter(private val daftarPenyanyi: List<Singer>, private val clickListener: (Singer) -> Unit) :
+    RecyclerView.Adapter<SingerAdapter.SingerViewHolder>(){
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SingerViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_singer, parent, false)
         return SingerViewHolder(view)
     }
     override fun onBindViewHolder(holder: SingerViewHolder, position: Int) {
+        val penyanyiData = daftarPenyanyi[position]
         holder.bind(daftarPenyanyi[position], clickListener)
+        holder.itemView.setOnClickListener {
+            clickListener(penyanyiData)
+        }
     }
 
     override fun getItemCount() = daftarPenyanyi.size
