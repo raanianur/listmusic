@@ -172,6 +172,7 @@ class FragmentSinger : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         val toolbar: Toolbar = view.findViewById(R.id.toolbar_nav)
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
         setHasOptionsMenu(true)

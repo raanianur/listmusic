@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentSinger">
+
+    <fragment
+        android:id="@+id/fragmentSinger"
+        android:name="com.raniara.fraglistmuic.FragmentSinger"
+        android:label="FragmentSinger" >
+        <action
+            android:id="@+id/action_fragmentSinger_to_fragmentSong"
+            app:destination="@id/fragmentSong">
+            <argument
+                android:name="penyanyiDipilih"
+                app:argType="com.raniara.fraglistmuic.Singer"/>
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSong"
+        android:name="com.raniara.fraglistmuic.FragmentSong"
+        android:label="FragmentSong" />
+
+
+
+</navigation>
