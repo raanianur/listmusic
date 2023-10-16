@@ -22,6 +22,114 @@ class FragmentSinger : Fragment() {
 
 
     private val daftarPenyanyi: List<Singer> = listOf(
+        Singer("Adele", R.drawable.adele, listOf(
+            Song("Rolling in the Deep", "21"),
+            Song("Set Fire to the Rain", "21"),
+            Song("Someone Like You", "21"),
+            Song("Hello", "25"),
+            Song("Send My Love (To Your New Lover)", "25"),
+            Song("When We Were Young", "25"),
+            Song("All I Ask", "25")
+        )),
+        Singer("Alessia Cara", R.drawable.alessia, listOf(
+            Song("Scars to Your Beautiful", "Know-It-All"),
+            Song("How Far I’ll Go (Moana Soundtrack)", "Moana Soundtrack"),
+            Song("Stay ft Zedd", "Stay - Single"),
+            Song("All We Know", "Know-It-All")
+        )),
+        Singer("Ariana Grande", R.drawable.arianna, listOf(
+            Song("Problem", "My Everything"),
+            Song("Break Free", "My Everything"),
+            Song("On Last Time", "My Everything"),
+            Song("Stuck with U ft Justin Bieber", "Stuck with U - Single"),
+            Song("Into You", "Dangerous Woman"),
+            Song("Thank U, Next", "Thank U, Next"),
+            Song("Boyfriend ft Social House", "Boyfriend - Single"),
+            Song("Positions", "Positions")
+        )),
+        Singer("Billie Eilish", R.drawable.billie, listOf(
+            Song("Bad Guy", "When We All Fall Asleep, Where Do We Go?"),
+            Song("Bury a Friend", "When We All Fall Asleep, Where Do We Go?"),
+            Song("When the party’s over", "When We All Fall Asleep, Where Do We Go?"),
+            Song("Lovely", "Don’t Smile At Me"),
+            Song("Happier Than Ever", "Happier Than Ever"),
+            Song("Therefore I Am", "Happier Than Ever")
+        )),
+        Singer("Bruno Mars", R.drawable.bruno, listOf(
+            Song("Just The Way You Are", "Doo-Wops & Hooligans"),
+            Song("Grenade", "Doo-Wops & Hooligans"),
+            Song("The Lazy Song", "Doo-Wops & Hooligans"),
+            Song("It Will Rain", "The Twilight Saga: Breaking Dawn – Part 1"),
+            Song("When I Was Your Man", "Unorthodox Jukebox"),
+            Song("Uptown Funk ft Mark Ronson", "Uptown Special"),
+            Song("That’s What I Like", "24K Magic"),
+            Song("Count On Me", "Doo-Wops & Hooligans"),
+            Song("Talking to the Moon", "Doo-Wops & Hooligans"),
+            Song("Nothin’ On You ft B.o.B", "B.o.B Presents: The Adventures of Bobby Ray"),
+            Song("Runaway", "Doo-Wops & Hooligans")
+        )),
+
+        Singer("Charlie Puth", R.drawable.charlie, listOf(
+            Song("Attention", "Voicenotes"),
+            Song("Patient", "Voicenotes"),
+            Song("One Call Away", "Nine Track Mind"),
+            Song("Dangerously", "Nine Track Mind"),
+            Song("We don’t Talk Anymore ft Selena Gomez", "Nine Track Mind"),
+            Song("See You Again ft Wiz Khalifa", "Furious 7 Soundtrack"),
+            Song("Cheating on You", "Single")
+        )),
+        Singer("Christina Perry", R.drawable.cristina, listOf(
+            Song("A Thousand Years", "Lovestrong"),
+            Song("Jar of Hearts", "Lovestrong"),
+            Song("Distance", "Lovestrong"),
+            Song("The Words", "Head or Heart")
+        )),
+        Singer("Ed Sheeran", R.drawable.ed, listOf(
+            Song("Perfect", "÷"),
+            Song("Shape Of You", "÷"),
+            Song("Thinking Out Loud", "x"),
+            Song("Photograph", "x"),
+            Song("I Don’t Care ft Justin Bieber", "No.6 Collaborations Project"),
+            Song("Castle On The Hill", "÷")
+        )),
+        Singer("Hindia", R.drawable.hindia, listOf(
+            Song("Secukupnya", "Album Tidak Diketahui"),
+            Song("Dehidrasi", "Album Tidak Diketahui"),
+            Song("Evakuasi", "Album Tidak Diketahui"),
+            Song("Besok Mungkin Kita Sampai", "Album Tidak Diketahui"),
+            Song("Untuk Apa", "Album Tidak Diketahui"),
+            Song("Apapun yang Terjadi", "Album Tidak Diketahui"),
+            Song("Rumah ke Rumah", "Album Tidak Diketahui"),
+            Song("Belum Tidur ft Sal Priadi", "Album Tidak Diketahui"),
+            Song("Membasuh", "Album Tidak Diketahui"),
+            Song("Jam Makan Siang", "Album Tidak Diketahui"),
+            Song("Evaluasi", "Album Tidak Diketahui"),
+            Song("Mata Air ft Natasha Udu", "Album Tidak Diketahui")
+        )),
+        Singer("Justin Bieber", R.drawable.justin, listOf(
+            Song("Ghost", "Justice"),
+            Song("Peaches", "Justice"),
+            Song("Yummy", "Changes"),
+            Song("Intentions", "Changes"),
+            Song("I Don’t Care ft Ed Sheeran", "No.6 Collaborations Project"),
+            Song("I’m The One", "Grateful (by DJ Khaled)"),
+            Song("Company", "Purpose"),
+            Song("Hold On", "Justice"),
+            Song("Confident", "Journals"),
+            Song("Sorry", "Purpose"),
+            Song("Love Yourself", "Purpose")
+        )),
+        Singer("Nadin Amizah", R.drawable.nadin, listOf(
+            Song("Bertaut", "Album Tidak Diketahui"),
+            Song("Sorai", "Album Tidak Diketahui"),
+            Song("Rumpang", "Album Tidak Diketahui"),
+            Song("Amin Paling Serius", "Album Tidak Diketahui"),
+            Song("Beranjak Dewasa", "Album Tidak Diketahui"),
+            Song("Seperti Tulang", "Album Tidak Diketahui"),
+            Song("Cermin", "Album Tidak Diketahui"),
+            Song("Rayuan Perempuan Gila", "Album Tidak Diketahui"),
+            Song("Semua Aku Dirayakan", "Album Tidak Diketahui")
+        )),
         Singer("Sia", R.drawable.sia, listOf(
             Song("Snowman", "Everyday Is Christmas"),
             Song("Chandelier", "1000 Forms of Fear"),
