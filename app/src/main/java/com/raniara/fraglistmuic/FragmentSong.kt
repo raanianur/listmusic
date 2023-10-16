@@ -21,17 +21,6 @@ class FragmentSong : Fragment(){
         return inflater.inflate(R.layout.fragment_song, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        singer = arguments?.getParcelable("singer")?:return
-
-        recyclerView = view.findViewById(R.id.recyclerViewLagu)
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        adapter = SongAdapter(singer.listSong)
-        recyclerView.adapter = adapter
-    }
-
     companion object{
         fun newInstance(penyanyi: Singer): FragmentSong {
             val fragment = FragmentSong()
@@ -41,5 +30,18 @@ class FragmentSong : Fragment(){
             return fragment
         }
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        singer = arguments?.getParcelable("penyanyi")?:return
+
+        recyclerView = view.findViewById(R.id.recyclerViewLagu)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        adapter = SongAdapter(singer.listSong)
+        recyclerView.adapter = adapter
+    }
+
+
 
 }

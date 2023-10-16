@@ -2,7 +2,6 @@ package com.raniara.fraglistmuic
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         val fragmentSinger = FragmentSinger()
         val fragment = supportFragmentManager.findFragmentByTag(FragmentSinger::class.java.simpleName)
 
-        if (fragment !is FragmentSinger){
+        if (fragment == null){
             supportFragmentManager.beginTransaction()
                 .add(R.id.container, fragmentSinger, FragmentSinger::class.java.simpleName)
                 .commit()

@@ -53,6 +53,7 @@ class FragmentSinger : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val recyclerView: RecyclerView = view.findViewById(R.id.recyclerViewPenyanyi)
+
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = SingerAdapter(daftarPenyanyi) { penyanyiDipilih ->
             // Aksi saat penyanyi diklik:
@@ -60,10 +61,7 @@ class FragmentSinger : Fragment() {
 
             // Melakukan transaksi fragment untuk menampilkan SongFragment dengan daftar lagu dari penyanyiDipilih
             fragmentManager?.beginTransaction()
-                ?.replace(
-                    androidx.fragment.R.id.fragment_container_view_tag,
-                    fragment
-                )  // Asumsikan Anda memiliki `fragmentContainer` sebagai ID root layout di activity Anda
+                ?.replace(R.id.container, fragment)
                 ?.addToBackStack(null)
                 ?.commit()
         }
