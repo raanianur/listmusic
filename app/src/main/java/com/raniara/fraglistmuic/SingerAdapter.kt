@@ -1,6 +1,7 @@
 package com.raniara.fraglistmuic
 
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,6 +19,7 @@ class SingerAdapter(private val daftarPenyanyi: List<Singer>, private val clickL
     }
     override fun onBindViewHolder(holder: SingerViewHolder, position: Int) {
         val penyanyiData = daftarPenyanyi[position]
+        Log.d("SingerAdapter", "Binding view for position: $position")
         holder.bind(daftarPenyanyi[position], clickListener)
         holder.itemView.setOnClickListener {
             clickListener(penyanyiData)

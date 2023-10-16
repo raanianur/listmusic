@@ -1,5 +1,7 @@
 package com.raniara.fraglistmuic
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -38,8 +40,17 @@ class FragmentSong : Fragment(){
 
         recyclerView = view.findViewById(R.id.recyclerViewLagu)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        adapter = SongAdapter(singer.listSong)
+
+
+        adapter = SongAdapter(singer.listSong){ lagudipilih ->
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("https://www.google.com/search?q=${lagudipilih.title} ${lagudipilih.album}")
+            startActivity(intent)
+        }
         recyclerView.adapter = adapter
+
+
+
     }
 
 
