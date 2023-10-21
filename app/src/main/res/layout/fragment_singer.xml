@@ -54,4 +54,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <EditText
+        android:id="@+id/penyanyiNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Penyanyi"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="596dp" />
+
+    <Button
+        android:id="@+id/savePenyanyiButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="652dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

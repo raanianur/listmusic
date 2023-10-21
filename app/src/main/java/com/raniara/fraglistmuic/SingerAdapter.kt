@@ -10,8 +10,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class SingerAdapter(private val daftarPenyanyi: List<Singer>, private val clickListener: (Singer) -> Unit) :
+class SingerAdapter( private val clickListener: (Singer) -> Unit) :
     RecyclerView.Adapter<SingerAdapter.SingerViewHolder>(){
+    private val daftarPenyanyi: MutableList<Singer> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SingerViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_singer, parent, false)
@@ -28,12 +29,19 @@ class SingerAdapter(private val daftarPenyanyi: List<Singer>, private val clickL
 
     override fun getItemCount() = daftarPenyanyi.size
 
+    fun submitList(data: List<Singer>){
+        daftarPenyanyi.clear()
+        daftarPenyanyi.addAll(data)
+        notifyDataSetChanged()
+    }
+
     class SingerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val imgPenyanyi: ImageView= view.findViewById(R.id.imgPenyanyi)
         private val tvNamaPenyanyi: TextView = view.findViewById(R.id.tvNamaPenyanyi)
 
         fun bind(penyanyi: Singer, clickListener: (Singer) -> Unit) {
             tvNamaPenyanyi.text = penyanyi.name
+            //bikin logic if penyanyi image tidak samadengan null
             imgPenyanyi.setImageResource(penyanyi.image)
             itemView.setOnClickListener { clickListener(penyanyi) }
         }
